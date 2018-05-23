@@ -4,9 +4,12 @@ import com.DaltonKing.Adder;
 import com.DaltonKing.CalculateBase;
 import com.DaltonKing.CalculateHelper;
 import com.DaltonKing.Divider;
+import com.DaltonKing.DynamicHelper;
 import com.DaltonKing.InvalidStatementException;
 import com.DaltonKing.MathEquation;
+import com.DaltonKing.MathProcessing;
 import com.DaltonKing.Multiplier;
+import com.DaltonKing.PowerOf;
 import com.DaltonKing.Subtracter;
 
 public class Main {
@@ -69,6 +72,23 @@ public class Main {
                     System.out.println("Original exception: " + e.getCause().getMessage());
                 }
             }
+        }
+
+        System.out.println("******Using interface******");
+
+        String[] statements2 = {
+                "add 27.0 92.0",
+                "power 5.0 2.0"
+        };
+
+        DynamicHelper helper2 = new DynamicHelper(new MathProcessing[]{
+                new Adder(),
+                new PowerOf()
+        });
+
+        for(String statement2:statements2){
+            String output = helper2.process(statement2);
+            System.out.println(output);
         }
     }
 
