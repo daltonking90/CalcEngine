@@ -1,4 +1,13 @@
-package com.DaltonKing;
+package com.myapp;
+
+import com.DaltonKing.Adder;
+import com.DaltonKing.CalculateBase;
+import com.DaltonKing.CalculateHelper;
+import com.DaltonKing.Divider;
+import com.DaltonKing.InvalidStatementException;
+import com.DaltonKing.MathEquation;
+import com.DaltonKing.Multiplier;
+import com.DaltonKing.Subtracter;
 
 public class Main {
 

@@ -1,6 +1,6 @@
 package com.DaltonKing;
 
-public enum MathCommand {
+enum MathCommand {
     Add,
     Subtract,
     Multiply,
